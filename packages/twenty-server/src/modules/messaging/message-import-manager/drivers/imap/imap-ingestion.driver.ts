@@ -1,13 +1,13 @@
 import { Injectable } from '@nestjs/common';
 
-import { ConnectedAccountEntity } from 'src/engine/metadata-modules/connected-account/entities/connected-account.entity';
-import { MessageChannelEntity } from 'src/engine/metadata-modules/message-channel/entities/message-channel.entity';
+import { type ConnectedAccountEntity } from 'src/engine/metadata-modules/connected-account/entities/connected-account.entity';
+import { type MessageChannelEntity } from 'src/engine/metadata-modules/message-channel/entities/message-channel.entity';
 import { ImapGetMessageListService } from 'src/modules/messaging/message-import-manager/drivers/imap/services/imap-get-message-list.service';
 import { ImapGetMessagesService } from 'src/modules/messaging/message-import-manager/drivers/imap/services/imap-get-messages.service';
-import { MessagingIngestionDriver } from 'src/modules/messaging/message-import-manager/drivers/interfaces/messaging-ingestion-driver.interface';
-import { GetMessagesResponse } from 'src/modules/messaging/message-import-manager/services/messaging-get-messages.service';
-import { GetMessageListsArgs } from 'src/modules/messaging/message-import-manager/types/get-message-lists-args.type';
-import { GetMessageListsResponse } from 'src/modules/messaging/message-import-manager/types/get-message-lists-response.type';
+import { type MessagingIngestionDriver } from 'src/modules/messaging/message-import-manager/drivers/interfaces/messaging-ingestion-driver.interface';
+import { type GetMessagesResponse } from 'src/modules/messaging/message-import-manager/services/messaging-get-messages.service';
+import { type GetMessageListsArgs } from 'src/modules/messaging/message-import-manager/types/get-message-lists-args.type';
+import { type GetMessageListsResponse } from 'src/modules/messaging/message-import-manager/types/get-message-lists-response.type';
 
 @Injectable()
 export class ImapIngestionDriver implements MessagingIngestionDriver {
